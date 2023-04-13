@@ -1,0 +1,17 @@
+name: Oraxen
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/Oraxen.yml'
+  schedule:
+    - cron: '0 */6 * * *'
+    
+jobs:
+  Iris:
+    uses: HenryDuck/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "oraxen/oraxen"
+      name: "Oraxen"
+      java: "17"
